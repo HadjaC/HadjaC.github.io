@@ -1,0 +1,109 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+#pli{padding: 15px;}
+
+#listnav{
+display: flex;
+flex-wrap: wrap;
+list-style: none;
+}
+.listnav li a button{
+    width: 40px;
+}
+.logo{
+border-radius: 10px;
+width: 100px;
+height: 70px;
+}
+.banner img{
+width: 100%;
+height:800px;
+}
+nav{
+float: right; 
+}
+.img{
+display: none;
+float: left;
+}
+.sociais{
+width: 40px;
+height: 40px;
+border-radius: 30px;
+}
+
+.rodape{
+    position:absolute;
+width:100%;
+height: 400px;
+display: block;
+}
+.LR{
+width: 100%;
+display: flex;
+height: 90%;   
+background-color: rgb(194, 164, 164);
+}
+.pp p{
+padding-top: 10px;
+text-align: center;
+}
+.pp{
+width: 100%;
+height: 10%;   
+background-color: rgb(204, 186, 189);
+}
+.dd{
+align-items: center;
+width: 100%;
+height: 100%;
+margin: 5px;
+}
+ul{
+list-style: none;
+}
+.dd li{
+margin: 10px;
+}
+.livros{
+    width: 100%;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.livro{
+    margin: 50px;
+    width: 250px;
+    height: 100%;
+    display: block;
+
+}
+.livro img{
+    width: 100%;
+    height: 80%;
+    border-radius: 10px;
+}
+.livro button{
+   width: 100%;
+   height: 70px;
+   border-radius:10px;
+   border: none; 
+   background-color: beige;
+}
+.livro button:hover{
+    border: 2px solid;
+    background-color: rgb(223, 223, 188);
+}
+p{
+    margin: 0px;
+    padding:0px;
+}
+p, a, li,h1,button{
+    font-style: italic;
+    color: black;
+    font-style: none;
+    text-decoration: none;
+}

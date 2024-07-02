@@ -1,0 +1,283 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.loading{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+    background-color: rgb(174, 174, 183);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.loading>:first-child{
+    padding: 10px 15px;
+    border: solid 1px rgb(202, 149, 194);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.loading>:first-child h1{
+    color: black;
+}
+
+.loading>:nth-child(2){
+    background-color: rgb(162, 57, 145);
+    height: 4px;
+    width: 50%;
+    margin: 5% 0;
+    position: relative;
+}
+
+.loading>:nth-child(2) i{
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    background-color: white;
+    animation: barAnimation 1s infinite;
+}
+
+@keyframes barAnimation{
+    0%{
+        right: 50%;
+    }
+    100%{
+        right: 0%;
+    }
+}
+
+
+.contprinc{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+.corpo{
+    flex: 1;
+}
+.mapa{   
+    width: 70%;
+    height: 100%;
+    background-color: rgb(33, 90, 90);
+}
+.secmapa{
+    display: flex;
+    margin-top:70px;
+    width: 800px;
+    height: 500px;
+    background-color:rgb(216, 0, 0);      
+}
+.mapa iframe{
+    width: 100%;
+    height: 100%;
+}
+
+.listnav{
+    display: flex;
+    list-style: none;
+    float: right;
+    margin-top: 30px;
+}
+.listnav li{
+    margin-right: 20px;
+}
+.listnav li a,button{
+    text-decoration: none;
+    color: black;
+    font-style:italic;
+}
+.listnav button {
+    width: 70px;
+    height: 40px;
+    margin-top: -10px;
+    background-color: rosybrown;
+    border-radius: 10px; /* Borda redonda */
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Sombra */
+    border: none; /* Remove a borda padrão */
+}
+
+.livros {
+    width: 100%;
+    display: block;
+    margin-top: 20px;
+}
+
+.livro {
+    margin: 20px;
+    width: 200px;
+    height: 100%;
+    display: block;
+}
+
+.livro img {
+    width: 100%;
+    height: 290px;
+    border-radius: 10px;
+}
+
+.livro button {
+    width: 100%;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    background-color: beige;
+}
+
+.livro button:hover {
+    border: 2px solid;
+    background-color: rgb(223, 223, 188);
+}
+
+#carrinho-info button{
+    width: 20%;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    background-color: beige;
+}
+
+#carrinho-info button:hover{
+    border: 2px solid;
+    background-color: rgb(223, 223, 188);
+}
+
+.livro p,h1{
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+}
+
+.aviso-compra {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    display: none; /* Começa escondido */
+}
+
+#finalizarCompraBtn {
+    padding: 8px 16px; /* Espaçamento interno para o tamanho do botão igual ao texto */
+    background-color: rgba(0, 0, 0, 0.3); /* Cor de fundo com transparência */
+    color: black; /* Cor do texto */
+    border: none; /* Remove a borda padrão */
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Sombra */
+    border-radius: 5px; /* Borda arredondada */
+    cursor: pointer; /* Cursor do mouse como ponteiro */
+    transition: background-color 0.3s, box-shadow 0.3s; /* Transições suaves */
+}
+
+#finalizarCompraBtn:hover {
+    background-color: rgba(0, 0, 0, 0.5); /* Cor de fundo ao passar o mouse */
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5); /* Sombra ao passar o mouse */
+}
+
+
+.master {
+    justify-content: center;
+    flex-wrap: wrap;
+}
+a{
+    text-decoration: none;
+    color: black;
+    font-style: italic;
+    }
+    footer {
+        display: block;
+        height: 300px;
+        background-color: rosybrown;
+    }
+
+    .RL {
+        display: flex;
+        height: 80%;
+    }
+
+    .subRL {
+        margin-top: 10px;
+        width: 25%;
+        display: block;
+        flex-wrap: wrap;
+    }
+
+    .subRL img {
+        width: 30px;
+       margin-left: 5px;
+        border-radius: 20px;
+    }
+
+    .subRL ul,h1 {
+        text-align: center;
+        flex-wrap: wrap;
+        display: block;
+        list-style: none;
+    }
+    .subRL ul li{
+        margin-top: 15px;
+    }
+    .subRL input{
+        margin-top: 50px;
+        margin-bottom: 30px;
+        height: 30px;
+        padding-right: 10px;
+    }
+    .RR {
+        background-color: beige;
+        height:30px;
+        text-align: center;
+        padding-top: 20px;
+    }
+    #beige{
+        background-color: beige;
+        text-align: center;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        padding-top: 30px;
+        padding-bottom:30px;
+    }
+    #beige h1{
+        padding-top: 30px;
+        padding-bottom:30px;
+    }
+    #beige div p{
+        width: 300px;
+        text-align: center;
+        
+    }
+    .conv{
+        width: 100%; 
+        background-color: white;
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+        justify-content: center;
+    }
+
+    .convsms{
+        align-self: center;
+        display: block;
+        width: 50%;
+    }
+
+    .convsms p{
+        margin: 10px;
+    }
+
