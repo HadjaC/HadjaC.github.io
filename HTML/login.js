@@ -28,6 +28,12 @@ $(document).ready(function(){
         var password = $('#password').val();
         var remember = $('#remember').is(':checked');
 
+        // Validar o email usando uma expressão regular
+        if (!isValidEmail(email)) {
+            alert('Por favor, insira um email válido.');
+            return;
+        }
+
         alert('Login submetido com sucesso.\nEmail: ' + email + '\nPassword: ' + password);
         window.location.href = '../index.html';  
 
@@ -44,10 +50,17 @@ $(document).ready(function(){
         var password2 = $('#password2Signup').val();
         var terms = $('#terms').is(':checked');
 
-        if (email === '' || password === '' || password2 === '' || !terms) {
-            alert('Por favor preencha todos os campos.');
+        // Validar o email usando uma expressão regular
+        if (!isValidEmail(email)) {
+            alert('Por favor, insira um email válido.');
             return;
         }
+
+        if (email === '' || password === '' || password2 === '' || !terms) {
+            alert('Por favor, preencha todos os campos.');
+            return;
+        }
+
         alert('Cadastro submetido com sucesso.\nEmail: ' + email + '\nPassword: ' + password);
         window.location.href = '../index.html'; 
 
@@ -68,5 +81,12 @@ $(document).ready(function(){
         $('#passwordSignup').val('');
         $('#password2Signup').val('');
         $('#terms').prop('checked', false);
+    }
+
+    // Função para validar o formato do email usando uma expressão regular
+    function isValidEmail(email) {
+        // Expressão  para validar o formato de email
+        var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
     }
 });
